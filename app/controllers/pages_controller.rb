@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   
   def welcome
     if company_signed_in?
-      redirect_to pages_home_path
+      redirect_to home_path
     end
   end
   
