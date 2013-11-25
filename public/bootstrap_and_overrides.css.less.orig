@@ -39,11 +39,25 @@ color:@black;
 @baseBorderRadius: 0px;
 
 .well {
-  background-color:rgba(245,245,245,0.6);
+  background-color:rgba(200,215,209,0.6);
 }
 
 .hero-unit {
-  background-color:rgba(245,245,245,0.6);
+  background-color:rgba(200,215,209,0.6);
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow:    inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow:         inset 0px 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.dashboard {
+  position:relative;
+  width:100%;
+  min-height:500px;
+  background-color:rgba(200,215,209,0.6);
   border: 1px solid #e3e3e3;
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow:    inset 0px 1px 1px rgba(0, 0, 0, 0.05);

@@ -1,0 +1,40 @@
+
+
+body { 
+background-image:url('/images/noisy_grid.png');
+}
+
+.container .jumbotron {
+
+  border: 1px solid #e3e3e3 ;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:    inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+.dashboard {
+  position:relative;
+  width:100%;
+  min-height:500px;
+  background-color:rgba(200,215,209,0.6);
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:    inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+$border-radius-large: 0px;
+$jumbotron-bg:rgba(200,215,209,0.5);
+$text-color:#333;
+$container-lg:85%;
+$well-bg:rgba(200,215,209,0.5);
+$navbar-height:40px;
+$navbar-default-bg: #363531;
+$navbar-default-border: #3c3b37;
+$border-radius-base: 0px;
+@import "bootstrap";

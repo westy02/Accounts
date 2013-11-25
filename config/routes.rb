@@ -1,4 +1,8 @@
 Accounts::Application.routes.draw do
+  resources :purchases
+
+  resources :sales
+
   devise_for :companies
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

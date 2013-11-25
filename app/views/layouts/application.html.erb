@@ -38,17 +38,19 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">Basic Accounts</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav pull-right">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Basic Accounts</a>
+ 		 </div>  
+ 		    
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
               <% if company_signed_in? %>
               <li><%= link_to "Home", home_path  %></li>
               <li><%= link_to "My Company", edit_company_registration_path %></li>
@@ -61,19 +63,16 @@
               <% end %>
             </ul>
           </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        
-        <div class="span9">
-          <%= bootstrap_flash %>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 ">
+           <%= flash_messages %>
           <%= yield %>
         </div>
-        <div class="span3">
-          <div class="well sidebar-nav" id="sidebar">
+        <div class="col-lg-3 ">
+          <div class="well" id="sidebar">
             <%= yield :sidebar %>
           </div><!--/.well -->
         </div><!--/span-->

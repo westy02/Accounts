@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107091543) do
+ActiveRecord::Schema.define(version: 20131118094438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,5 +33,27 @@ ActiveRecord::Schema.define(version: 20131107091543) do
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
+
+  create_table "purchases", force: true do |t|
+    t.date     "date"
+    t.float    "subtotal"
+    t.float    "tax"
+    t.float    "total"
+    t.integer  "customer_id"
+    t.string   "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sales", force: true do |t|
+    t.date     "date"
+    t.float    "subtotal"
+    t.float    "tax"
+    t.float    "total"
+    t.integer  "customer_id"
+    t.string   "company_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
